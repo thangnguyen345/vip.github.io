@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Tính Tiền Cho Khách Hàng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Trang Tính Tiền Cho Khách Hàng</h1>
+
+        <!-- Ô nhập thông tin khách hàng -->
+        <div class="input-group">
+            <label for="customerName">Tên khách hàng:</label>
+            <input type="text" id="customerName" name="customerName" required>
+        </div>
+
+        <div class="input-group">
+            <label for="customerPhone">Số điện thoại:</label>
+            <input type="text" id="customerPhone" name="customerPhone" required>
+        </div>
+
+        <div class="input-group">
+            <label for="customerAddress">Địa chỉ:</label>
+            <input type="text" id="customerAddress" name="customerAddress" required>
+        </div>
+
+        <!-- Thêm sản phẩm -->
+        <div class="input-group">
+            <label for="productName">Tên sản phẩm:</label>
+            <input type="text" id="productName" name="productName" required>
+        </div>
+
+        <div class="input-group">
+            <label for="productPrice">Giá sản phẩm:</label>
+            <input type="number" id="productPrice" name="productPrice" required>
+        </div>
+
+        <div class="input-group">
+            <label for="productQuantity">Số lượng:</label>
+            <input type="number" id="productQuantity" name="productQuantity" required>
+        </div>
+
+        <button class="button" onclick="addProduct()">Thêm sản phẩm</button>
+        <button class="button" onclick="saveToExcel()">Lưu danh sách sản phẩm</button>
+
+        <h2>Danh sách sản phẩm</h2>
+        <table id="productList">
+            <thead>
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div class="total">
+            Tổng tiền: <span id="totalPrice">0</span>
+        </div>
+
+        <!-- Ngày tháng năm -->
+        <div class="input-group">
+            <label for="date">Ngày tháng năm:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
